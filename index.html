@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href= 
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script src="main.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    
+
+    <style>
+ .container {
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color:black;
+}
+input[type=text], 
+        input[type=password] { 
+            width: 100%; 
+            padding: 12px 40px; 
+            margin: 8px 0; 
+            display: inline-block; 
+            border: 1px solid #ccc; 
+            box-sizing: border-box; 
+            background-color: #ccc;
+        } 
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.fontpassword {
+ position: relative;
+}
+          
+.fontpassword i{
+ position: absolute;
+right: 15px;
+ top: 40px;
+color: gray;
+}
+#message {
+  background: black;
+  color: white;
+  position: relative;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+.btn1{
+    color:red;
+    margin-bottom: 40px;
+}
+.lble{
+    color: white;
+}
+    </style>
+</head>
+<body>
+
+    <form onSubmit = "return validatePassword(this)"  class="container">
+        <button class= "btn1"type="button" >Back</button><br><br>
+
+
+    <label class="lble" for="username"><b>Email</b></label>
+    <input type="text" " name="username" required>
+
+    <div class="fontpassword">
+        <label class="lble"><b>New password</b></label> 
+        <input type="password" " name="psw" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required> 
+        <i class="fa fa-eye fa-lg"></i>
+    </div>   
+    <div class="fontpassword">
+        <label class="lble"><b>Re-Enter New password</b></label> 
+        <input type="password"  name="psw" id="confirm_password" required> 
+        <i class="fa fa-eye fa-lg"></i>
+    </div>   
+
+    <div id="message">
+        <h3>Your Password Must Contain</h3>
+        <p id="length" class="invalid">Atleast <b>8 characters</b></p>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital uppercase</b> letter</p>
+        <p id="number" class="invalid">A <b>Special Characted</b></p>
+
+        <p id="number" class="invalid">A <b>number</b></p>
+      </div>
+
+    
+    <button type="submit" class="btn">Create Account</button><br>
+   
+  </form>
+</form>
+</body>
+</html>
